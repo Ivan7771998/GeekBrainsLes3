@@ -1,0 +1,21 @@
+#outputMsg:disabled {
+    -fx-opacity: 1.0;
+    -fx-background-color: #A7AAA6;
+    -fx-text-alignment:right;
+    -fx-text-fill: #010001;
+}
+.button {
+    -fx-background-color: #A7AAA6;
+    -fx-font-size: 10;
+    -fx-margin: 5px; //не работает; не смог понять почему
+    -fx-text-fill: #fafff3;
+}
+.button:margin {
+    -fx-margin: 5px;
+}
+.button:hover {
+    -fx-background-color: #52FF33;
+    -fx-font-size: 10;
+    -fx-margin: 5px;
+    -fx-text-fill: #0f00ff;
+}

@@ -1,8 +1,33 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open"/>
+                <MenuItem text="Quit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="outputMsg" disable="true" translateZ="10" minWidth="400" minHeight="440"/>
+    </center>
+    <bottom>
+        <HBox minWidth="400" minHeight="100">
+            <TextField fx:id="txtSend" focusTraversable="false" onKeyPressed="#keyPressed"
+                       promptText="Enter your message" minWidth="350"/>
+            <Button fx:id="btnSend" text="Send" onAction="#sendMsg" minWidth="50" minHeight="12" maxHeight="25"/>
+        </HBox>
+    </bottom>
+</BorderPane>
